@@ -1,11 +1,14 @@
-const { sequelize } = require('../db/config');
+const { db } = require('../db/config');
 const { DataTypes} = require('sequelize');
 
 
 
 
-const Card = sequelize.define('Card',{
-    id: DataTypes.INTEGER,
+const Card = db.define('Card',{
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true
+    },
     name: DataTypes.STRING,
     mojo: DataTypes.INTEGER,
     stamina: DataTypes.INTEGER,
