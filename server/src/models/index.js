@@ -8,11 +8,11 @@ const { Attack } = require('./Attack')
 User.hasOne(Deck);
 Deck.belongsTo(User);
 
-Deck.hasMany(Card);
-Card.belongsTo(Deck);
+// Deck.hasMany(Card);
+// Card.belongsTo(Deck);
 
-Attack.belongsToMany(Card, {through: 'CardAttacks'});
-Card.belongsToMany(Attack, {through: 'CardAttacks'});
+// Attack.belongsToMany(Card, {through: 'CardAttacks'});
+// Card.belongsToMany(Attack, {through: 'CardAttacks'});
 // and then export them all below
 module.exports = { 
     User,
